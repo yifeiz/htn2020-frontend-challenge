@@ -1,6 +1,7 @@
 import React from "react";
 
 import users from "../apis/users";
+import ProfileDetails from "./ProfileDetails";
 
 class Profile extends React.Component {
   state = { currentUser: null };
@@ -26,6 +27,7 @@ class Profile extends React.Component {
           <div> ID: {user.id}</div>
           <div>Checked In: {user.checked_in ? "yes" : "no"} </div>
           <div className="container-fluid">
+            <ProfileDetails type={user.type} />
             <button type="button" className="btn btn-primary btn-block">
               Click me
             </button>
@@ -33,7 +35,7 @@ class Profile extends React.Component {
         </div>
       );
     }
-    return;
+    return <div>Sorry, no user was found.</div>;
   }
 
   componentDidMount() {
