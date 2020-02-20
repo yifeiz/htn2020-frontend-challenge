@@ -1,5 +1,8 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Profile from "./components/Profile.js";
+import App from "./components/App";
+import { Provider } from "react-redux";
 
-ReactDOM.render(<Profile />, document.querySelector("#root"));
+import AppRouter from "./Routers/AppRouter";
+
+ReactDOM.render(<App />, document.querySelector("#root"));

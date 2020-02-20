@@ -21,3 +21,7 @@
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
+
+# Additional ignores (code editor settings, generated code)
+.vscode
+public/dist
