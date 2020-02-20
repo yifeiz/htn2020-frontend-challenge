@@ -2,13 +2,13 @@ import React from "react";
 
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 
-import App from "../components/App";
+import Profile from "../components/Profile";
 
 const AppRouter = () => {
   <BrowserRouter>
     <div>
       <Switch>
-        <Route path="/" component={App} exact={true} />
+        <Route path="/" component={Profile} exact={true} />
       </Switch>
     </div>
   </BrowserRouter>;
