@@ -1,15 +1,10 @@
 import React from "react";
+import { connect } from "react-redux";
 
-import users from "../apis/users";
 import ProfileDetails from "./ProfileDetails";
 
 class Profile extends React.Component {
   state = { currentUser: null };
-  getUsers = async () => {
-    const { data } = await users.get("?id=291012924");
-    // always get Mr. Goose (for now)
-    this.setState({ currentUser: data });
-  };
 
   renderProfile(user) {
     if (user) {
@@ -38,17 +33,18 @@ class Profile extends React.Component {
     return <div>Sorry, no user was found.</div>;
   }
 
-  componentDidMount() {
-    this.getUsers();
-  }
-
   render() {
     return (
-      <div className="container">
-        {this.renderProfile(this.state.currentUser)}
-      </div>
+      <div className="container">{this.renderProfile(this.props.user)}</div>
     );
   }
 }
 
-export default Profile;
+const mapStateToProps = (state = []) => {
+  if (state.users) {
+    return { user: state.users };
+  }
+  return state;
+};
+
+export default connect(mapStateToProps)(Profile);
