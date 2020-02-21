@@ -25,19 +25,17 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <div className="container">
-        <form onSubmit={this.onFormSubmit}>
-          <div className="form-group">
-            <label> User </label>
-            <input
-              type="text"
-              value={this.state.user}
-              placeholder="e.g. Feridun"
-              onChange={e => this.setState({ user: e.target.value })}
-            />
-          </div>
-        </form>
-      </div>
+      <form onSubmit={this.onFormSubmit}>
+        <div className="form-group">
+          <label> User </label>
+          <input
+            type="text"
+            value={this.state.user}
+            placeholder="e.g. Feridun"
+            onChange={e => this.setState({ user: e.target.value })}
+          />
+        </div>
+      </form>
     );
   }
 }

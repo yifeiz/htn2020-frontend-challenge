@@ -7,6 +7,10 @@ import ProfileDetails from "./ProfileDetails";
 class Profile extends React.Component {
   state = { currentUser: null };
 
+  onUserLogout = () => {
+    this.props.onUserLogout();
+  };
+
   renderProfile(user) {
     if (user) {
       return (
@@ -43,7 +47,19 @@ class Profile extends React.Component {
   render() {
     return (
       <div className="container">
-        <SearchBar />
+        <div className="d-flex flex-row-reverse justify-content-between">
+          <div className="d-inline-flex">
+            <button
+              className="btn btn-primary"
+              onClick={() => this.onUserLogout()}
+            >
+              {" "}
+              Log Out
+            </button>
+          </div>
+          <SearchBar />
+        </div>
+
         {this.renderProfile(this.props.user)}
       </div>
     );

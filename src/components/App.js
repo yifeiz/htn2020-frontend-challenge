@@ -3,16 +3,16 @@ import { connect } from "react-redux";
 
 import Profile from "./Profile";
 import Login from "./Login";
-import { fetchUsers } from "../actions";
+import { UserLogin, UserLogout } from "../actions";
 
 class App extends React.Component {
-  state = { userName: "", password: "", loggedIn: true };
+  state = { userName: "", password: "", loggedIn: false };
 
   onUserLogin = (user, password) => {
     console.log(user);
     console.log(password);
     if (user === "spongebob@pineapple.ca" && password === "<3Gary") {
-      this.setState({ loggedIn: true });
+      this.props.UserLogin();
     } else {
       alert(
         "Sorry, invalid credentials. Please try again (Hint: look at the template"
@@ -21,7 +21,7 @@ class App extends React.Component {
   };
 
   onUserLogout = () => {
-    this.setState({ loggedOut: false });
+    this.props.UserLogout();
   };
 
   renderApp(loggedIn) {
@@ -32,12 +32,12 @@ class App extends React.Component {
     }
   }
   render() {
-    return <div>{this.renderApp(this.state.loggedIn)}</div>;
+    return <div>{this.renderApp(this.props.loggedIn)}</div>;
   }
 }
 
 const mapStateToProps = state => {
-  return state;
+  return { loggedIn: state.loggedIn };
 };
 
-export default connect(mapStateToProps, { fetchUsers })(App);
+export default connect(mapStateToProps, { UserLogin, UserLogout })(App);
