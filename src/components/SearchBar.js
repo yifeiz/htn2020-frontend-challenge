@@ -16,8 +16,10 @@ class SearchBar extends React.Component {
       id = 777628281;
     } else if (this.state.user === "Spongebob") {
       id = 591112924;
-    } else {
+    } else if (this.state.user === "Goose") {
       id = 291012924;
+    } else {
+      id = 0;
     }
     this.props.fetchUsers(id);
     this.setState({ user: "" });
@@ -25,9 +27,9 @@ class SearchBar extends React.Component {
 
   render() {
     return (
-      <form onSubmit={this.onFormSubmit}>
+      <form onSubmit={this.onFormSubmit} className="container">
         <div className="form-group">
-          <label> User </label>
+          <label> User Search </label>
           <input
             type="text"
             value={this.state.user}

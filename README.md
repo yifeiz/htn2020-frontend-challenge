@@ -1,68 +1,10 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Hack the North Frontend Challenge 2020
 
-## Available Scripts
+I had a lot of fun working on this frontend project! While I've done a few react side projects before, this was really the first time
+working on a project with slightly more complicated requirements, and I had a lot of fun exploring new tools.
 
-In the project directory, you can run:
+First, I planned out the structure by drawing out a quick sketch of how I envisioned the application, and how each component would
+fit into it. I wanted to make sure that the code didn't balloon too much, so I factored out components as much as I could. One big issue
+I ran into for the project was whenever I used a new technology that I hadn't used before, or wasn't as familiar with, I would spend a longer than expected time learning or reviewing that new tool. (In hindsight, starting on redux-persist during the late stages of the project was probably a bad idea, and could have been better used in cleaning up the existing project, i.e. cleaning up the interface and making improvements to the CSS in general) However, I'm glad I was able to figure out redux-persist in the end, and managed to get it working in the app.
 
-### `npm start`
-
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Given additional time, I would definitely work on cleaning up CSS and theming the entire application before adding any more functionality. Personally, I overestimated my abilities, and took on some of the bonus tasks earlier on and focused on implementing those, when I probably should have focused on fixing the CSS of the existing project. The project currently is using bootstrap, but is definitely not as responsive as it could be, and I did not do extensive testing on different browsers and devices, which I would have liked to have done. In addition, I would like to explore using react-routers as well, and add additional pages to the application (perhaps an admin-only section where you could edit user information). I would also have liked to connect the frontend with a node backend, so that the frontend could make use of better user auth and cookies instead of a hard-coded value for authentication. Overall, this project was quite open-ended, and there is definitely a lot of room to explore and develop this project further!

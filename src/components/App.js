@@ -32,7 +32,13 @@ class App extends React.Component {
     }
   }
   render() {
-    return <div>{this.renderApp(this.props.loggedIn)}</div>;
+    return (
+      <div className="container">
+        <h1>Hack The North User Database</h1>
+        <br></br>
+        {this.renderApp(this.props.loggedIn)}
+      </div>
+    );
   }
 }
 

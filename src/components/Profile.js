@@ -46,14 +46,13 @@ class Profile extends React.Component {
 
   render() {
     return (
-      <div className="container">
+      <div className="profile-card">
         <div className="d-flex flex-row-reverse justify-content-between">
           <div className="d-inline-flex">
             <button
               className="btn btn-primary"
               onClick={() => this.onUserLogout()}
             >
-              {" "}
               Log Out
             </button>
           </div>
