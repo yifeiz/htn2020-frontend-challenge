@@ -1,6 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 
+import SearchBar from "./SearchBar";
 import ProfileDetails from "./ProfileDetails";
 
 class Profile extends React.Component {
@@ -35,7 +36,10 @@ class Profile extends React.Component {
 
   render() {
     return (
-      <div className="container">{this.renderProfile(this.props.user)}</div>
+      <div className="container">
+        <SearchBar />
+        {this.renderProfile(this.props.user)}
+      </div>
     );
   }
 }

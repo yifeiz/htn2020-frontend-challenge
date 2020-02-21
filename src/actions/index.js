@@ -1,7 +1,7 @@
 import user from "../apis/users";
 
-export const fetchUsers = () => async dispatch => {
-  const response = await user.get("?id=291012924");
+export const fetchUsers = id => async dispatch => {
+  const response = await user.get(`?id=${id}`);
   dispatch({
     type: "FETCH_USER",
     payload: response.data
