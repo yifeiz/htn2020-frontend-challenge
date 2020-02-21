@@ -7,9 +7,6 @@ import { fetchUsers } from "../actions";
 
 class App extends React.Component {
   state = { userName: "", password: "", loggedIn: true };
-  componentDidMount() {
-    this.props.fetchUsers();
-  }
 
   onUserLogin = (user, password) => {
     console.log(user);

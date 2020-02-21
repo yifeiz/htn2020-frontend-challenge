@@ -1,9 +1,9 @@
-- message when null
-- setup redux and routers
-- use to setup login page
-- get unique profile settings
-- implement buttons (and do something to state)
+- message when null DONEish
+- setup redux and routers DONE
+- use to setup login page DONE
+- get unique profile settings NEED TO DO
+- implement buttons (and do something to state) NEED TO DO
 - persist state (redux-persist? need to investigate)
-- setup webpack (and test deploy to gh pages)
+- setup webpack (and test deploy to gh pages) DONE
 - add a second page for fun (and to justify use of routers :D )
 - make a node backend for fun? (can get cookies, improve login)

@@ -12,10 +12,15 @@ class SearchBar extends React.Component {
     // console.log(this.state.term);
     if (this.state.user === "Feridun") {
       id = 190258281;
+    } else if (this.state.user === "Grace") {
+      id = 777628281;
+    } else if (this.state.user === "Spongebob") {
+      id = 591112924;
     } else {
       id = 291012924;
     }
     this.props.fetchUsers(id);
+    this.setState({ user: "" });
   };
 
   render() {
@@ -26,7 +31,7 @@ class SearchBar extends React.Component {
             <label> User </label>
             <input
               type="text"
-              value={this.state.term}
+              value={this.state.user}
               placeholder="e.g. Feridun"
               onChange={e => this.setState({ user: e.target.value })}
             />
